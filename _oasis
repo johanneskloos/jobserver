@@ -27,6 +27,13 @@ Executable "jobdumper"
   BuildDepends: cohttp, cohttp.lwt, lwt.ppx
   CompiledObject: best
 
+Executable "jobshell"
+  Path:         .
+  BuildTools:   ocamlbuild
+  MainIs:       jobshell.ml
+  BuildDepends: cohttp, cohttp.lwt, lwt.ppx
+  CompiledObject: best
+
 Library "job"
   Path:         .
   BuildTools:   ocamlbuild
