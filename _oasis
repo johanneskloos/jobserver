@@ -1,0 +1,37 @@
+OASISFormat: 0.4
+Name:        job-tools
+Version:     0.1
+Synopsis:    Client/server tools to distribute multiple jobs
+Authors:     Johannes Kloos
+Plugins:     StdFiles (0.4), META (0.4)
+License:     MIT
+
+Executable "jobserver"
+  Path:         .
+  BuildTools:   ocamlbuild
+  MainIs:       jobserver.ml
+  BuildDepends: cohttp, cohttp.lwt, pcre
+  CompiledObject: best
+
+Executable "jobclient"
+  Path:         .
+  BuildTools:   ocamlbuild
+  MainIs:       jobclient.ml
+  BuildDepends: cohttp, cohttp.lwt, lwt.ppx
+  CompiledObject: best
+
+Executable "jobdumper"
+  Path:         .
+  BuildTools:   ocamlbuild
+  MainIs:       jobdumper.ml
+  BuildDepends: cohttp, cohttp.lwt, lwt.ppx
+  CompiledObject: best
+
+Library "job"
+  Path:         .
+  BuildTools:   ocamlbuild
+  Install:      true
+  XMETAEnable:  true
+  XMETADescription: Execute functionality for various inputs taken from a job server
+  BuildDepends: cohttp, cohttp.lwt, lwt.ppx
+  Modules:      Jobloop
