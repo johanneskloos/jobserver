@@ -1,10 +1,18 @@
 OASISFormat: 0.4
 Name:        job-tools
-Version:     0.1
+Version:     0.9
 Synopsis:    Client/server tools to distribute multiple jobs
-Authors:     Johannes Kloos
+Authors:     Johannes Kloos <jkloos@mpi-sws.org>
+Maintainers: Johannes Kloos <jkloos@mpi-sws.org>
+Homepage:    http://github.com/johanneskloos/jobserver
 Plugins:     StdFiles (0.4), META (0.4)
 License:     MIT
+Description:
+  These tools allow you to easily distribute a large number
+  of small tasks over several worker processes.
+  The job server hands out a list of lines, each describing
+  some job, to a number of clients who handle these jobs.
+
 
 Executable "jobserver"
   Path:         .

@@ -27,3 +27,6 @@ job.mldylib
 job.mllib
 myocamlbuild.ml
 setup.ml
+
+# Editor save files
+*~
