@@ -50,3 +50,12 @@ Library "job"
   XMETADescription: Execute functionality for various inputs taken from a job server
   BuildDepends: cohttp, cohttp.lwt, lwt.ppx
   Modules:      Jobloop
+
+SourceRepository "head"
+  Type:         git
+  Location:     http://github.com/johanneskloos/jobserver
+
+SourceRepository "this"
+  Type:         git
+  Location:     http://github.com/johanneskloos/jobserver
+  Tag:          release-1.0
