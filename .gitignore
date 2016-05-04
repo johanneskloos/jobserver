@@ -30,3 +30,8 @@ setup.ml
 
 # Editor save files
 *~
+
+# oasis2opam generated files
+job-tools.install
+_oasis_remove_.ml
+opam/
