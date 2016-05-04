@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        job-tools
-Version:     0.9
+Version:     1.0
 Synopsis:    Client/server tools to distribute multiple jobs
 Authors:     Johannes Kloos <jkloos@mpi-sws.org>
 Maintainers: Johannes Kloos <jkloos@mpi-sws.org>
