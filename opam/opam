@@ -1,0 +1,29 @@
+opam-version: "1.2"
+name: "job-tools"
+version: "1.0"
+maintainer: "Johannes Kloos <jkloos@mpi-sws.org>"
+authors: [ "Johannes Kloos <jkloos@mpi-sws.org>" ]
+license: "MIT"
+homepage: "http://github.com/johanneskloos/jobserver"
+dev-repo: "http://github.com/johanneskloos/jobserver"
+bug-reports: "http://github.com/johanneskloos/jobserver"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: ["ocaml" "setup.ml" "-install"]
+remove: [
+  ["ocaml" "%{etc}%/job-tools/_oasis_remove_.ml" "%{etc}%/job-tools"]
+]
+build-test: [
+  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-test"]
+]
+depends: [
+  "cohttp"
+  "lwt"
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
+  "pcre" {build}
+]

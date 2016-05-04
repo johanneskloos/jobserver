@@ -1,0 +1,6 @@
+Client/server tools to distribute multiple jobs
+These tools allow you to easily distribute a large number of small
+tasks over several worker processes. The job server hands out a list
+of lines, each describing some job, to a number of clients who handle
+these jobs.
+
