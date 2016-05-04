@@ -1,0 +1,13 @@
+# OASIS_START
+# DO NOT EDIT (digest: cdf10bd304f205acab3abd104ec3e044)
+version = "1.0"
+description =
+"Execute functionality for various inputs taken from a job server"
+requires = "cohttp cohttp.lwt lwt.ppx"
+archive(byte) = "job.cma"
+archive(byte, plugin) = "job.cma"
+archive(native) = "job.cmxa"
+archive(native, plugin) = "job.cmxs"
+exists_if = "job.cma"
+# OASIS_STOP
+

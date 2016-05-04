@@ -1,0 +1,12 @@
+(* OASIS_START *)
+(* DO NOT EDIT (digest: 9a9675288c72c10a62641a20657f9106) *)
+
+Authors of job-tools:
+
+* Johannes Kloos <jkloos@mpi-sws.org>
+
+Current maintainers of job-tools:
+
+* Johannes Kloos <jkloos@mpi-sws.org>
+
+(* OASIS_STOP *)

@@ -1,0 +1,39 @@
+# OASIS_START
+# DO NOT EDIT (digest: 7789d7b46f0979689123b48f3f60cf1d)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+true: annot, bin_annot
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable jobserver
+<jobserver.{native,byte}>: pkg_cohttp
+<jobserver.{native,byte}>: pkg_cohttp.lwt
+<jobserver.{native,byte}>: pkg_pcre
+<*.ml{,i,y}>: pkg_pcre
+# Executable jobclient
+<jobclient.{native,byte}>: pkg_cohttp
+<jobclient.{native,byte}>: pkg_cohttp.lwt
+<jobclient.{native,byte}>: pkg_lwt.ppx
+# Executable jobdumper
+<jobdumper.{native,byte}>: pkg_cohttp
+<jobdumper.{native,byte}>: pkg_cohttp.lwt
+<jobdumper.{native,byte}>: pkg_lwt.ppx
+# Executable jobshell
+<jobshell.{native,byte}>: pkg_cohttp
+<jobshell.{native,byte}>: pkg_cohttp.lwt
+<jobshell.{native,byte}>: pkg_lwt.ppx
+# Library job
+"job.cmxs": use_job
+<*.ml{,i,y}>: pkg_cohttp
+<*.ml{,i,y}>: pkg_cohttp.lwt
+<*.ml{,i,y}>: pkg_lwt.ppx
+# OASIS_STOP
